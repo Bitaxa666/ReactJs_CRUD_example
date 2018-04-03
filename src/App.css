@@ -18,6 +18,12 @@
   font-size: large;
 }
 
+.w3-border {
+  padding:4px;
+  width:10%;
+  margin: 2%;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
