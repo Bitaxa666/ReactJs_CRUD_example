@@ -7,4 +7,5 @@ start test - npm test (cd crud) - start the test script;
 update screenShot tests - npm test -- -u
 <br />
 start backend - npm start (cd backend) - port 8011 (e.g: http://localhost:8011/api/games - endpoint for response all games);
+<br/>
 
