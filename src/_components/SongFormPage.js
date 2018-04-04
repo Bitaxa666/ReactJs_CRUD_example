@@ -13,7 +13,8 @@ class SongFormPage extends React.Component {
 
     state = {
         redirect: false,
-    }
+    };
+
     componentDidMount = () => {
         if (this.props.match.params._id){
             this.props.fetchGame(this.props.match.params._id);

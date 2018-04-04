@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SongForm render main layout ofr SongForm 1`] = `
+<div>
+  <div
+    className="ui container"
+  >
+    <form
+      className="ui form"
+      onSubmit={[Function]}
+    >
+      <h1>
+        Add New Song
+      </h1>
+      <div
+        className="field"
+      >
+        <label
+          htmlFor="title"
+        >
+          Title
+        </label>
+        <input
+          id="title"
+          name="title"
+          onChange={[Function]}
+          value=""
+        />
+        <span />
+      </div>
+      <div
+        className="field"
+      >
+        <label
+          htmlFor="cover"
+        >
+          Cover URL
+        </label>
+        <input
+          id="cover"
+          name="cover"
+          onChange={[Function]}
+          value=""
+        />
+        <span />
+      </div>
+      <div
+        className="field"
+      />
+      <div
+        className="field"
+      >
+        <button
+          className="ui primary button"
+          disabled={true}
+        >
+          Save
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+`;

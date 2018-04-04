@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomePage render main layout 1`] = `
+<div
+  className="home_page_class"
+>
+  <h1>
+    This is Home Page
+  </h1>
+  <div
+    className="ui container"
+  >
+    <form>
+      <h1>
+        Home page test
+      </h1>
+      <div
+        className="home-form"
+      >
+        <label
+          htmlFor="title"
+        >
+          Title
+        </label>
+        <input
+          id="title"
+          name="title"
+          onChange={[Function]}
+          value=""
+        />
+        <br />
+        <span>
+          Errors
+        </span>
+        <br />
+        <span>
+          Test snapshoot Errors
+        </span>
+      </div>
+    </form>
+  </div>
+</div>
+`;

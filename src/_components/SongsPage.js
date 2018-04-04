@@ -9,7 +9,7 @@ import { fetchGames, deleteGame } from '../_actions/actions';
 
 class SongsPage extends React.Component {
 
-    componentDidMount(){
+    componentDidMount =() =>{
         this.props.fetchGames();
     }
 

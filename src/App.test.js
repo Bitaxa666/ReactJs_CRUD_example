@@ -1,13 +1,20 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import App from './App';
 import reducers from './reducers/games';
+import { expect } from 'chai';
+import { configure, shallow, mount} from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
+import App from './App';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-});
+configure({ adapter: new Adapter() });
 
-it('reducers', () => {
-    expect(reducers(undefined, {})).toEqual([]);
+describe('<App />', function() {
+
+    it('renders without crashing', () => {
+        const wrapper = shallow(<App />);
+        expect(wrapper.contains(<h2>Welcome to React</h2>)).to.equal(true);
+    });
+
+     it('reducers', () => {
+     expect(reducers(undefined, {})).to.deep.equal([]);
+     });
 });

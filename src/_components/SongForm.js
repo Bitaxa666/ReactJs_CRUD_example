@@ -5,15 +5,17 @@ import React from 'react';
 import classnames from 'classnames';
 
 class SongForm extends React.Component {
+
+
     state = {
         _id: this.props.game ? this.props.game._id : null,
         title: this.props.game ? this.props.game.title : '',
         cover: this.props.game ? this.props.game.cover : '',
         errors: {},
-        loading: false,
+        loading: false
     };
 
-    componentWillReceiveProps = (nextProps) => {
+    componentWillReceiveProps = (nextProps)=> {
         this.setState({
             _id: nextProps.game._id,
             title: nextProps.game.title,
@@ -21,19 +23,20 @@ class SongForm extends React.Component {
         });
     };
 
-    handleChange =(e)=>{
-        if(!!this.state.errors[e.target.name]){
+    handleChange = (e) => {
+        if (!!this.state.errors[e.target.name]) {
             let errors = Object.assign({}, this.state.errors);
             delete errors[e.target.name];
-            this.setState ({
+            this.setState({
                 [e.target.name]: e.target.value,
                 errors
             });
-        } else {
+        }
+        else {
             this.setState({[e.target.name]: e.target.value});
         }
     };
-    handleSubmit = (e) =>{
+    handleSubmit = (e) => {
         e.preventDefault();
 
         //validation
@@ -52,10 +55,13 @@ class SongForm extends React.Component {
     }
     render(){
 
+        const enabled = this.state.title.length > 0
+            && this.state.cover.length > 0;
+
         const form = (
             <div className="ui container">
                 <form className={classnames('ui', 'form', { loading: this.state.loading })} onSubmit={this.handleSubmit}>
-                    <h1>Add new game</h1>
+                    <h1>Add New Song</h1>
 
                     {!!this.state.errors.global && <div className="ui negative message"><p>{this.state.errors.global}</p></div>}
 
@@ -86,7 +92,7 @@ class SongForm extends React.Component {
                     </div>
 
                     <div className="field">
-                        <button className="ui primary button">Save</button>
+                        <button className="ui primary button" disabled={!enabled}>Save</button>
                     </div>
                 </form>
             </div>
